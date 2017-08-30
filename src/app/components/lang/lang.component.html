@@ -1,0 +1,5 @@
+<select class="btn dropdown-toggle" (change)="selectLang($event.target.value)">
+        <option *ngFor="let lang of supportedLanguages" [value]="lang.value" [selected]="lang.value == selectedLang.value">
+            {{ (lang.display | translate).toUpperCase() }}
+        </option>
+</select>

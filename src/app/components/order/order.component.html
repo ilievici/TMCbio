@@ -1,0 +1,101 @@
+<div class="container">
+    <div class="page-header text-center">
+        <h1>{{ 'Make an online order' | translate }}</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>{{ 'Product' | translate }}</th>
+                        <th>{{ 'Unit Cost' | translate }}</th>
+                        <th class="text-center">
+                            <span class="hidden-xs">{{ 'Quantity' | translate }}</span>
+                            <span class="visible-xs">QNT</span>
+                        </th>
+                        <th class="text-center">{{ 'Measurement' | translate }}</th>
+                        <th class="text-right">{{ 'Total' | translate }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products">
+                        <td class="vert-align">{{product.name}}</td>
+                        <td class="vert-align ng-binding">{{product.price}} {{ 'MDL' | translate }}</td>
+                        <td class="text-center">
+                            <select class="form-control" (change)="selectQuantity($event.target.value, product)">
+                                <option *ngFor="let opt of product.totalAvailable">{{opt}}</option>
+                            </select>
+                        </td>
+                        <td class="text-center"> {{ ('Ton' | translate).toLowerCase() }}</td>
+                        <td class="text-right vert-align ng-binding">{{product.totalPay}} {{ 'MDL' | translate }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-sm-6 col-md-6 contact-info">
+            <p class="text-center"><strong>{{ 'Information' | translate }}</strong></p>
+            <div class="form-group">
+                <label class="control-label">{{ 'Your name' | translate }}</label>
+                <input name="full_name" required placeholder="{{ 'Your name' | translate }}" class="form-control required" type="text" [(ngModel)]="client.name" #name="ngModel">
+            </div>
+            <div class="form-group">
+                <label class="control-label">{{ 'Your phone' | translate }}</label>
+                <input name="phone" required placeholder="{{ 'Your phone' | translate }}" class="form-control required" type="text" [(ngModel)]="client.phone" #name="ngModel">
+            </div>
+            <div class="form-group">
+                <label class="control-label">{{ 'Your email' | translate }}</label>
+                <input name="email" required placeholder="{{ 'Your email' | translate }}" class="form-control" type="text" [(ngModel)]="client.email" #name="ngModel">
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-6">
+            <p class="text-center"><strong>{{ 'Delivery address' | translate }}</strong></p>
+            <div class="form-group">
+                <label class="control-label">{{ 'City' | translate }}</label>
+                <input name="city" required placeholder="{{ 'City' | translate }}" class="form-control required" type="text" [(ngModel)]="address.city" #name="ngModel">
+            </div>
+
+
+            <div class="form-group">
+                <label class="control-label">{{ 'Street' | translate }}</label>
+                <input name="street" placeholder="{{ 'Street address' | translate }}" class="form-control" type="text" [(ngModel)]="address.street" #name="ngModel">
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">{{ 'Pay method' | translate }}</label>
+                <select class="form-control" name="pay_method" required [(ngModel)]="address.payMethod" #name="ngModel">
+                    <option *ngFor="let pay of payMethods" class="form-control" [value]="pay">{{pay}}</option>
+                </select>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th colspan="3" class="text-center">{{ 'Order summary' | translate }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ 'Shipping cost' | translate }}:</td>
+                        <td>
+                            <div *ngIf="totalShippingStr !== '0'">{{ 'Free shipping begin from' | translate }} {{freeShippingSumm}}</div>
+                        </td>
+                        <td class="text-right">{{totalShippingStr}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ 'Total' | translate }}:</td>
+                        <td></td>
+                        <td id="total" class="text-right ng-binding">{{totalOrderSum}} {{ 'MDL' | translate }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                <button name="submit" type="submit" class="btn btn-store btn-block">{{ 'Order Product' | translate }}</button>
+            </p>
+            <input type="hidden" name="submitted" id="submitted" value="true">
+        </div>
+
+    </div>
+</div>

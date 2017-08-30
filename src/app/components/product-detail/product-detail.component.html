@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="page-header text-center">
+    <h1>{{ 'Product details' | translate }}</h1>
+  </div>
+
+  <div *ngIf="product">
+
+    <div class="row">
+      <div id="project-sidebar" class="col-md-4">
+        <h2 id="sdbr-title">{{product.name}}</h2>
+        <div>
+          <div id="sdbr-price">{{product.price}} {{ 'MDL' | translate }}</div>
+        </div>
+        <br/>
+        <a (click)="goBack()">{{ 'Back' | translate }}</a>
+        <br/>
+        <a href="/order">{{ 'Order now' | translate }}</a>
+      </div>
+
+      <div id="project-content" class="col-md-8 ">
+        <p>{{product.description}}</p>
+        <br/>
+        <div class="img-box">
+          <img class="img-responsive project-image" src={{product.imagePath}} alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

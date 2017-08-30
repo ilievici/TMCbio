@@ -1,0 +1,76 @@
+@import 'assets/css/bootstrap.min.css';
+@import 'assets/css/site.css';
+
+
+
+.required  {
+    border-left: 5px solid #a94442; /* red */
+}
+
+
+
+.iconBig {
+    font-size: 50px;
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 0 auto
+}
+.iconBig:before {
+    line-height: 100px
+}
+
+.gray-bg {
+    background-color: #f2f2f2;
+}
+
+.padding-top-bottom {
+    padding: 60px 0;
+}
+
+.padding-top-bottom {
+    padding: 60px 0;
+}
+
+.color-bg {
+    background-color: #23A657;
+}
+
+.light-typo {
+    color: #fff;
+}
+
+.anima.fade-up.in {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+.anima.d2 {
+    transition-delay: .6s;
+}
+
+.anima.fade-up {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+    -moz-transform: translateY(60px);
+    -ms-transform: translateY(60px);
+    transform: translateY(60px);
+    -webkit-transition: -webkit-transform .5s ease-out,opacity .5s ease-in;
+    transition: transform .5s ease-out,opacity .5s ease-in-out;
+}
+
+#main-footer, #social {
+    padding: 40px 0 20px;
+}
+
+.light-typo {
+    color: #fff;
+}
+
+.dark-bg {
+    background-color: #323A42;
+}
+

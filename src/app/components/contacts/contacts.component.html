@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="page-header text-center">
+        <h1>{{ 'Contacts' | translate }}</h1>
+    </div>
+    <div class="text-center">
+        <p>{{ 'ContactsString' | translate }}</p>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 contact-info cta-message anima fade-right in">
+            <address>
+                <strong>TMCbio SRL</strong>
+                <br> Moldova, Ungheni, str. Stefan cel Mare 52
+                <br> (+373) 684-81-848
+                <br> test_contact@test.com
+            </address>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-8 anima fade-up d1 in">
+            <div class="form-group">
+                <input id="contact-name" name="contactName" placeholder="{{ 'Your name' | translate }}" class="form-control required" type="text"
+                    [(ngModel)]="message.clientName" #name="ngModel">
+            </div>
+            <div class="form-group">
+                <input id="contact-phone" name="phone" placeholder="{{ 'Your phone' | translate }}" class="form-control required" type="text"
+                    [(ngModel)]="message.clientPhone" #name="ngModel">
+            </div>
+            <div class="form-group">
+                <input id="contact-mail" name="email" placeholder="{{ 'Your email' | translate }}" class="form-control" type="text" [(ngModel)]="message.clientEmail"
+                    #name="ngModel">
+            </div>
+            <div class="form-group">
+                <textarea id="contact-message" name="message" placeholder="{{ 'Your message' | translate }}" class="form-control required"
+                    rows="5" [(ngModel)]="message.Message" #name="ngModel"></textarea>
+            </div>
+            <div class="form-group">
+                <button name="submit" type="submit" class="btn btn-store btn-block">{{ 'Send Message' | translate }}</button>
+            </div>
+            <input type="hidden" name="submitted" value="true">
+        </div>
+    </div>
+</div>
