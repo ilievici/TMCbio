@@ -24,15 +24,12 @@ export class LangComponent implements OnInit {
     let selected = 'ro';
 
     let lang_value = localStorage.getItem('lang_value');
-    if (lang_value != "")
+    if (lang_value !== null)
       selected = lang_value;
 
     this.selectLang(selected);
 
     this.selectedLang = this.supportedLanguages.find(s => s.value == selected);
-
-    //console.clear();
-    //console.log("x = " + selectedLang.display);
   }
 
   isCurrentLang(lang: string) {

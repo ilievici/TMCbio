@@ -52,4 +52,4 @@ import { InMemoryDataService } from './services/in-memory-data.service';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

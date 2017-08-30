@@ -38,6 +38,7 @@ export const LANG_RO_TRANS = {
     'Make an online order': 'Faceți o comandă online',
     'Measurement': 'Unitatea de masura',
     'Ton': 'Tona',
+    'Tons': 'Tone',
     'Free': 'Gratis',
     'Free shipping begin from': 'Livrare gratis incepand cu',
     'Invoice': 'Factura',
@@ -61,5 +62,6 @@ export const LANG_RO_TRANS = {
 
     'browse the goods': 'răsfoiți produsele',
     'Briquettes': 'Bricheti',
-    'MDL': 'MDL'
+    'MDL': 'MDL',
+    'Stock available': "La depozit"
 };

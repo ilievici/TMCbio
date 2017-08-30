@@ -9,12 +9,15 @@
       <div id="project-sidebar" class="col-md-4">
         <h2 id="sdbr-title">{{product.name}}</h2>
         <div>
+          <div>{{ 'Stock available' | translate }}: {{product.stockQuantity}} {{ ('Tons' | translate).toLowerCase() }}</div>
+        </div>
+        <div>
           <div id="sdbr-price">{{product.price}} {{ 'MDL' | translate }}</div>
         </div>
         <br/>
         <a (click)="goBack()">{{ 'Back' | translate }}</a>
         <br/>
-        <a href="/order">{{ 'Order now' | translate }}</a>
+        <a href="./order">{{ 'Order now' | translate }}</a>
       </div>
 
       <div id="project-content" class="col-md-8 ">

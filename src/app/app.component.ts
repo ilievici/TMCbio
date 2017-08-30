@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -13,10 +13,8 @@ export class AppComponent {
   onAnchorClick() {
     this.route.fragment.subscribe(f => {
       const element = document.querySelector("#" + f)
-      if (element)
+      if (element != null)
         element.scrollIntoView(true);
-      else
-        element.scrollIntoView(false);
     });
   }
 }

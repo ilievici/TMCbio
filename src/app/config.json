@@ -1,0 +1,17 @@
+{
+    "default_lang": "ro",
+    "supportedLanguages": [
+        {
+            "display": "Romanian",
+            "value": "ro"
+        },
+        {
+            "display": "Russian",
+            "value": "ru"
+        },
+        {
+            "display": "English",
+            "value": "en"
+        }
+    ]
+}

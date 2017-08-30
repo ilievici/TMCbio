@@ -38,6 +38,7 @@ export const LANG_EN_TRANS = {
     'Make an online order': 'Make an online order',
     'Measurement': 'Measurement',
     'Ton': 'Ton',
+    'Tons': 'Tons',
     'Free': 'Free',
     'Free shipping begin from': 'Free shipping begin from',
     'Invoice': 'Invoice',
@@ -61,5 +62,6 @@ export const LANG_EN_TRANS = {
 
     'browse the goods': 'browse the goods',
     'Briquettes': 'Briquettes',
-    'MDL': 'MDL'
+    'MDL': 'MDL',
+    'Stock available': "Stock available"
 };

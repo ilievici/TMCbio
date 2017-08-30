@@ -38,6 +38,7 @@ export const LANG_RU_TRANS = {
     'Make an online order': 'Сделать онлайн-заказ',
     'Measurement': 'Измерение',
     'Ton': 'Тонна',
+    'Tons': 'Тон',
     'Free': 'Бесплатно',
     'Free shipping begin from': 'Бесплатная доставка',
     'Invoice': 'Счет-фактура',
@@ -55,11 +56,12 @@ export const LANG_RU_TRANS = {
     'Free shipping only': 'Бесплатная доставка только',
     'days': 'дня',
     'MDL': 'MDL',
-    
+
     'Quality guaranteed': 'Качество гарантировано',
     'Home delivery': 'Доставка на дом',
     'Secure payment': 'Безопасная оплата',
 
     'browse the goods': 'просмотр товаров',
-    'Briquettes': 'Брикеты'
+    'Briquettes': 'Брикеты',
+    'Stock available': "Имеется в наличии"
 };
