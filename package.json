@@ -14,8 +14,7 @@
   "assets": [
     "assets",
     "ghiya",
-    "icon.ico",
-    "app/translate/lang-en.ts"
+    "icon.ico"
   ],
   "private": true,
   "dependencies": {
