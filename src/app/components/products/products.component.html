@@ -7,7 +7,7 @@
         <article *ngFor="let product of products" (click)="onSelectProduct(product)" [class.selected]="product === selectedProduct"
             class="design product col-xs-12 col-sm-6 col-md-4 anima fade-up in">
             <h4 class="text-center">{{product.name}}</h4>
-            <a href="/product/{{product.id}}">
+            <a href="./product/{{product.id}}">
                 <div class="img-box">
                     <img class="img-responsive project-image" src={{product.imagePath}} alt="" />
                 </div>
@@ -16,7 +16,7 @@
                 {{product.price}} {{ 'MDL' | translate }}
             </div>
             <div class="text-center">
-                <a href="/product/{{product.id}}">{{ 'View Details' | translate }}</a>
+                <a href="./product/{{product.id}}">{{ 'View Details' | translate }}</a>
             </div>
         </article>
     </div>

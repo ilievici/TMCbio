@@ -4,7 +4,7 @@
             <button class="btn btn-success navbar-toggle" data-ng-click="navbarExpanded = !navbarExpanded">
                 <span class="glyphicon glyphicon-chevron-down"></span>
             </button>
-            <a href="/">
+            <a href="./">
                 <div class="logo-container">
                     <div class="logo">
                         <img src="assets/img/new_logo.png">
@@ -14,13 +14,13 @@
         </div>
         <div class="collapse navbar-collapse" data-collapse="!navbarExpanded">
             <ul class="nav navbar-nav navbar-right">
-                <a class="navbar-brand" href="#products">{{ 'Products' | translate }}</a>
-                <a class="navbar-brand" href="/about">{{ 'About us' | translate }}</a>
-                <a class="navbar-brand" href="/order">{{ 'Order' | translate }}</a>
-                <a class="navbar-brand" href="/contact">{{ 'Contacts' | translate }}</a>
+                <a class="navbar-brand" [routerLink]="['home']" fragment="products" (click)="onAnchorClick()">{{ 'Products' | translate }}</a>
+                <a class="navbar-brand" [routerLink]="['home']" fragment="about" (click)="onAnchorClick()">{{ 'About us' | translate }}</a>
+                <a class="navbar-brand" [routerLink]="['home']" fragment="order" (click)="onAnchorClick()">{{ 'Order' | translate }}</a>
+                <a class="navbar-brand" [routerLink]="['home']" fragment="contact" (click)="onAnchorClick()">{{ 'Contacts' | translate }}</a>
             </ul>
         </div>
-    </div>
+    </div>    
 </div>
 
 <div class="container">
